@@ -4,5 +4,5 @@ set -e
 set -u
 set -x
 
-git push origin
+git push -f origin
 rsync -avz --exclude='.*.swp' html/ ec2-user@ec2-75-101-189-40.compute-1.amazonaws.com:siglemic.net/html/
