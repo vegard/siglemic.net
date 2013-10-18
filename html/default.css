@@ -1,0 +1,118 @@
+@font-face {
+	/* http://www.fontspace.com/the-liquid-plumber/super-mario-brothers */
+	font-family: SuperMarioBros;
+	src: url('tlpsmb.ttf');
+}
+
+body {
+	max-width: 1024px;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+a:hover {
+	color: #aaf;
+}
+
+a:visited {
+	color: #960;
+}
+
+h1 {
+	font-family: SuperMarioBros;
+	font-size: 50pt;
+	letter-spacing: 2pt;
+
+	/* Be consistent with the menu */
+	margin-left: 0;
+	padding-left: 20px;
+
+	margin-top: .25em;
+	margin-bottom: .1em;
+
+	text-align: center;
+}
+
+h1 a {
+	color: black;
+}
+
+h1 a:visited {
+	color: inherit;
+}
+
+h2 {
+	font-family: SuperMarioBros;
+	font-size: 24pt;
+	letter-spacing: 1pt;
+	text-transform: lowercase;
+}
+
+#menu {
+	font-family: SuperMarioBros;
+	text-transform: lowercase;
+
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+
+	/* The font has a weird baseline or something, so we need more
+	 * padding on top to make it look nice. */
+	padding-top: 4px;
+	padding-bottom: 0px;
+
+	margin-top: 0;
+	margin-bottom: 2em;
+
+	padding-left: 20px;
+
+	text-align: center;
+}
+
+#menu a {
+	font-weight: bold;
+}
+
+#menu a:hover {
+	color: #aaf;
+}
+
+#menu a:visited {
+	color: blue;
+}
+
+ul.horizontal li {
+	display: inline-block;
+	padding: 4px;
+	margin-right: 32px;
+}
+
+#main {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#main p {
+	text-indent: 2em;
+	text-align: justify;
+}
+
+#main li {
+	text-align: justify;
+}
+
+#footer {
+	border-top: 2px solid black;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-top: 2em;
+
+	text-align: center;
+}
+
+#footer p {
+	margin: 0;
+}

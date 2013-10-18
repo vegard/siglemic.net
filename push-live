@@ -1,0 +1,7 @@
+#! /bin/bash
+
+set -e
+set -u
+set -x
+
+rsync -avz --exclude='.*.swp' html/ ec2-user@ec2-75-101-189-40.compute-1.amazonaws.com:siglemic.net/html/
