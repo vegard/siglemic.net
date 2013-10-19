@@ -103,6 +103,33 @@ ul.horizontal li {
 	text-align: justify;
 }
 
+table {
+	width: 100%;
+	table-layout: fixed;
+
+	border: 2px solid black;
+	border-collapse: collapse;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+caption {
+	margin-bottom: 1em;
+}
+
+tr {
+	border-bottom: 2px solid black;
+}
+
+th, td {
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+
+	text-align: left;
+	vertical-align: top;
+	padding: 8px;
+}
+
 #footer {
 	border-top: 2px solid black;
 	padding-top: 1em;
