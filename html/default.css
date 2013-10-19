@@ -8,6 +8,16 @@ body {
 	max-width: 1024px;
 }
 
+.title {
+	position: absolute;
+	text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* A hack to get rid of the extra "siglemic.net" string in the Google title */
+.title:after {
+	content: 'siglemic.net';
+}
+
 a {
 	text-decoration: none;
 	color: blue;
