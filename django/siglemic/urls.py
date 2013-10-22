@@ -4,6 +4,8 @@ from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
+from website.views import site_login, site_logout, site_authenticate, site_main
+
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'siglemic.views.home', name='home'),
@@ -14,4 +16,10 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+
+    url(r'^login/?$', site_login),
+    url(r'^logout/?$', site_logout),
+    url(r'^authenticate/?$', site_authenticate),
+
+    url(r'^/?$', site_main),
 )
