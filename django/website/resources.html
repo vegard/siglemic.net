@@ -1,0 +1,141 @@
+{% extends "website/base.html" %}
+
+{% block main %}
+<h2>Resources</h2>
+
+<h3>Siglemic's public profiles</h3>
+<ul>
+<li><a href="http://twitch.tv/siglemic">twitch.tv</a></li>
+<li><a href="http://twitter.com/siglemic">Twitter</a></li>
+<li><a href="http://youtube.com/siglemic">YouTube</a></li>
+<li><a href="http://www.reddit.com/user/Siglemic">Reddit</a></li>
+</ul>
+
+<h3>In the media</h3>
+<ul>
+<li><a href="http://www.wired.com/gamelife/2013/10/zelda-wind-waker-speedrun/all/">wired: For the World's Fastest Gamers, Failure Is Just One Bad Jump Away</a> (article)</li>
+<li><a href="http://www.buzzfeed.com/josephbernstein/meet-the-superstars-of-the-sport-youve-never-heard-of">BuzzFeed: Meet The Superstars Of The Sport You’ve Never Heard Of</a> (article)</li>
+<li><a href="http://www.reddit.com/r/IAmA/comments/iygl4/iama_super_mario_64_speedrunner/">Reddit: IAMA super mario 64 speedrunner</a></li>
+</ul>
+
+<h3>Speed running</h3>
+<ul>
+<li><a href="https://docs.google.com/document/d/11I4jbKHW7hm9q6rRPxfzTipCW-14nw3Pbgf1M9u0AVw/edit?hl=en_US">Siglemic's 70 star route guide</a></li>
+</ul>
+
+<h3>Records</h3>
+
+<h4>Super Mario 64, 120 star, Nintendo 64</h4>
+<ul>
+<li><b>2012-12-19</b>: 1:44:01 (<a href="http://www.twitch.tv/siglemic/b/349276663">twitch</a>, <a href="http://www.youtube.com/watch?v=KbkYT9a4lAY">youtube</a>)</li>
+<li><b>2012-09-01</b>: 1:44:52 (<a href="http://www.youtube.com/watch?v=lXk8eR4FoQw">youtube</a>, <a href="http://www.youtube.com/watch?v=RxOpB5wp4QI">youtube</a>)</li>
+<li><b>2012-08-09</b>: 1:45:35 (<a href="http://www.youtube.com/watch?v=LUOYuAcx71s">youtube</a>)</li>
+<li><b>2012-08-08</b>: 1:46:21 (<a href="http://imgur.com/r/gaming/4qlHJ">imgur</a>)</li>
+<li><b>2012-08-05</b>: 1:46:23 (<a href="http://www.youtube.com/watch?v=dRbqtsH4MWA">youtube</a>, <a href="http://www.youtube.com/watch?v=upVWSr_jVoY">youtube</a>)</li>
+<li><b>2011-07-20</b>: 1:49:06</li>
+</ul>
+
+<h3>GameShark/Gecko codes</h3>
+
+<table>
+<caption>Manual timer (press L to restart)</caption>
+<tr>
+<th>PAL</th>
+<th>US NTSC</th>
+<th>JAP NTSC</th>
+<th>Shindou</th>
+<th>VC</th>
+</tr>
+<tr>
+<td>
+<pre>
+81244CAC A030
+81244CAE 9526
+812484A4 A200
+812484A6 00F6
+80246413 0040
+81244CB0 0000
+81244CB2 0000
+D0309261 0020
+81309504 0000
+</pre>
+</td>
+<td>
+<pre>
+81249688 A03B
+8124968A B25E
+8124DC7C A1A0
+8124DC7E 00EE
+8024B197 0040
+81249690 0000
+81249692 0000
+D033AFA1 0020
+8133B26C 0000
+</pre>
+</td>
+<td>
+<pre>
+81249658 A03B
+
+8124dadc A1A0
+8124dade 00EE
+8024b017 0040
+81249660 0000
+81249662 0000
+D0339c31 0020
+81339efc 0000
+</pre>
+</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+
+<table>
+<caption>Instant death (press D-pad down to die)</caption>
+<tr>
+<th>PAL</th>
+<th>US NTSC</th>
+<th>JAP NTSC</th>
+<th>Shindou</th>
+<th>VC</th>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre>D133AFA0 0400
+8033B21E 0000</pre>
+</td>
+<td>
+<pre>D1339c30 0400
+80339eae 0000</pre>
+</td>
+<td>
+<pre>D1353484 0400
+8031DA6E 0000</pre>
+</td>
+<td>
+<pre>291A5120 00000400
+011A539E 00000000
+E0000000 80008000</pre></td>
+</tr>
+</table>
+
+<table>
+<caption>Infinite lives</caption>
+<tr>
+<th>PAL</th>
+<th>US NTSC</th>
+<th>JAP NTSC</th>
+<th>Shindou</th>
+<th>VC</th>
+</tr>
+<tr>
+<td></td>
+<td><pre>8033b21d 0064</pre></td>
+<td><pre>80339EAD 0064</pre></td>
+<td><pre>8031DA6D 0064</pre></td>
+<td></td>
+</tr>
+</table>
+{% endblock %}

@@ -1,0 +1,150 @@
+@font-face {
+	/* http://www.fontspace.com/the-liquid-plumber/super-mario-brothers */
+	font-family: SuperMarioBros;
+	src: url('tlpsmb.ttf');
+}
+
+body {
+	max-width: 1024px;
+}
+
+.title {
+	position: absolute;
+	text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* A hack to get rid of the extra "siglemic.net" string in the Google title */
+.title:after {
+	content: 'siglemic.net';
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #aaf;
+}
+
+h1 {
+	font-family: SuperMarioBros;
+	font-size: 50pt;
+	letter-spacing: 2pt;
+
+	/* Be consistent with the menu */
+	margin-left: 0;
+	padding-left: 20px;
+
+	margin-top: .25em;
+	margin-bottom: .1em;
+
+	text-align: center;
+}
+
+h1 a {
+	color: black;
+}
+
+h1 a:visited {
+	color: inherit;
+}
+
+h2 {
+	font-family: SuperMarioBros;
+	font-size: 24pt;
+	letter-spacing: 1pt;
+	text-transform: lowercase;
+}
+
+#menu {
+	font-family: SuperMarioBros;
+	text-transform: lowercase;
+
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+
+	/* The font has a weird baseline or something, so we need more
+	 * padding on top to make it look nice. */
+	padding-top: 4px;
+	padding-bottom: 0px;
+
+	margin-top: 0;
+	margin-bottom: 2em;
+
+	padding-left: 20px;
+
+	text-align: center;
+}
+
+#menu a {
+	font-weight: bold;
+}
+
+#menu a:visited {
+	color: blue;
+}
+
+#menu a:hover {
+	color: #aaf;
+}
+
+ul.horizontal li {
+	display: inline-block;
+	padding: 4px;
+	margin-right: 32px;
+}
+
+#main {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#main p {
+	text-indent: 2em;
+	text-align: justify;
+}
+
+#main li {
+	text-align: justify;
+}
+
+table {
+	width: 100%;
+	table-layout: fixed;
+
+	border: 2px solid black;
+	border-collapse: collapse;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+caption {
+	margin-bottom: 1em;
+}
+
+tr {
+	border-bottom: 2px solid black;
+}
+
+th, td {
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+
+	text-align: left;
+	vertical-align: top;
+	padding: 8px;
+}
+
+#footer {
+	border-top: 2px solid black;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-top: 2em;
+
+	text-align: center;
+}
+
+#footer p {
+	margin: 0;
+}

@@ -4,7 +4,8 @@ from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
-from website.views import site_login, site_logout, site_authenticate, site_main
+from website.views import site_login, site_logout, site_authenticate
+from website.views import site_main, site_news, site_faq, site_resources, site_gallery
 
 urlpatterns = patterns('',
     # Examples:
@@ -21,5 +22,9 @@ urlpatterns = patterns('',
     url(r'^logout/?$', site_logout),
     url(r'^authenticate/?$', site_authenticate),
 
-    url(r'^/?$', site_main),
+    url(r'^(?:index\.html)?$', site_main),
+    url(r'^news(?:\.html)?$', site_news),
+    url(r'^faq(?:\.html)?$', site_faq),
+    url(r'^resources(?:\.html)?$', site_resources),
+    url(r'^gallery(?:\.html)?$', site_gallery),
 )

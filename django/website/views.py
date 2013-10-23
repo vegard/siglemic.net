@@ -55,8 +55,24 @@ def site_authenticate(request):
 
 	return HttpResponseRedirect('/')
 
+from django.template import RequestContext, loader
+
 def site_main(request):
+	return render_to_response('website/main.html', RequestContext(request))
+
 	if request.user.is_authenticated():
 		return HttpResponse('authenticated as %s' % request.user.username, content_type='text/plain')
 	else:
 		return HttpResponse('not authenticated', content_type='text/plain')
+
+def site_news(request):
+	return render_to_response('website/news.html', RequestContext(request))
+
+def site_faq(request):
+	return render_to_response('website/faq.html', RequestContext(request))
+
+def site_resources(request):
+	return render_to_response('website/resources.html', RequestContext(request))
+
+def site_gallery(request):
+	return render_to_response('website/gallery.html', RequestContext(request))
