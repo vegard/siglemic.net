@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.http import HttpResponse, HttpResponseRedirect
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -28,4 +29,6 @@ urlpatterns = patterns('',
     url(r'^faq(?:\.html)?$', site_faq),
     url(r'^resources(?:\.html)?$', site_resources),
     url(r'^gallery(?:\.html)?$', site_gallery),
+
+    url(r'^googlea(.*)\.html$', lambda request, foo: HttpResponseRedirect('/static' + request.get_full_path())),
 )
