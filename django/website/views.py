@@ -60,11 +60,6 @@ from django.template import RequestContext, loader
 def site_main(request):
 	return render_to_response('website/main.html', RequestContext(request))
 
-	if request.user.is_authenticated():
-		return HttpResponse('authenticated as %s' % request.user.username, content_type='text/plain')
-	else:
-		return HttpResponse('not authenticated', content_type='text/plain')
-
 def site_news(request):
 	return render_to_response('website/news.html', RequestContext(request))
 
