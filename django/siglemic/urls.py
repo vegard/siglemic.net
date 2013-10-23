@@ -5,7 +5,7 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 from website.views import site_login, site_logout, site_authenticate
-from website.views import site_main, site_news, site_faq, site_resources, site_gallery
+from website.views import site_main, site_stream, site_news, site_faq, site_resources, site_gallery
 
 urlpatterns = patterns('',
     # Examples:
@@ -23,6 +23,7 @@ urlpatterns = patterns('',
     url(r'^authenticate/?$', site_authenticate),
 
     url(r'^(?:index\.html)?$', site_main),
+    url(r'^stream(?:\.html)?$', site_stream),
     url(r'^news(?:\.html)?$', site_news),
     url(r'^faq(?:\.html)?$', site_faq),
     url(r'^resources(?:\.html)?$', site_resources),

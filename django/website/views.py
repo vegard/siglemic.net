@@ -60,6 +60,9 @@ from django.template import RequestContext, loader
 def site_main(request):
 	return render_to_response('website/main.html', RequestContext(request))
 
+def site_stream(request):
+	return render_to_response('website/stream.html', RequestContext(request))
+
 def site_news(request):
 	return render_to_response('website/news.html', RequestContext(request))
 
