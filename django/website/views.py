@@ -9,11 +9,11 @@ from django.contrib.auth.decorators import login_required
 import httplib
 import json
 
-dummy_password = client_secret
+dummy_password = settings.TWITCH_CLIENT_SECRET
 
 def site_login(request):
 	# XXX: url encode?
-	return HttpResponseRedirect('https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=%s&redirect_uri=%s&scope=user_read' % (client_id, redirect_uri))
+	return HttpResponseRedirect('https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=%s&redirect_uri=%s&scope=user_read' % (settings.TWITCH_CLIENT_ID, settings.TWITCH_REDIRECT_URL))
 
 @login_required
 def site_logout(request):
@@ -25,7 +25,7 @@ def site_authenticate(request):
 	code = request.GET['code']
 
 	connection = httplib.HTTPSConnection('api.twitch.tv', timeout=5)
-	connection.request('POST', 'https://api.twitch.tv/kraken/oauth2/token', 'client_id=%s&client_secret=%s&grant_type=authorization_code&redirect_uri=%s&code=%s' % (client_id, client_secret, redirect_uri, code))
+	connection.request('POST', 'https://api.twitch.tv/kraken/oauth2/token', 'client_id=%s&client_secret=%s&grant_type=authorization_code&redirect_uri=%s&code=%s' % (settings.TWITCH_CLIENT_ID, settings.TWITCH_CLIENT_SECRET, settings.TWITCH_REDIRECT_URL, code))
 	response = connection.getresponse()
 	if response.status != 200:
 		# XXX: proper error message
@@ -48,9 +48,9 @@ def site_authenticate(request):
 	try:
 		user = User.objects.get(username=twitch_username)
 	except User.DoesNotExist:
-		user = User.objects.create_user(twitch_username, email=twitch_user['email'], password=client_secret)
+		user = User.objects.create_user(twitch_username, email=twitch_user['email'], password=dummy_password)
 
-	user = authenticate(username=twitch_username, password=client_secret)
+	user = authenticate(username=twitch_username, password=dummy_password)
 	login(request, user)
 
 	return HttpResponseRedirect('/')
