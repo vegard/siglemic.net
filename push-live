@@ -5,4 +5,8 @@ set -u
 set -x
 
 git push -f origin
-rsync -avz --exclude='.*.swp' html/ ec2-user@ec2-75-101-189-40.compute-1.amazonaws.com:siglemic.net/html/
+rsync -avz --exclude='.*.swp' --exclude='siglemic.sqlite' django/ ec2-user@ec2-75-101-189-40.compute-1.amazonaws.com:siglemic.net/django/
+
+ssh -t ec2-user@ec2-75-101-189-40.compute-1.amazonaws.com sudo /etc/init.d/httpd stop
+ssh -t ec2-user@ec2-75-101-189-40.compute-1.amazonaws.com 'cd siglemic.net/django && DJANGO_SETTINGS_MODULE=siglemic.settings.production ./manage.py syncdb'
+ssh -t ec2-user@ec2-75-101-189-40.compute-1.amazonaws.com sudo /etc/init.d/httpd start
