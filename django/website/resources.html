@@ -150,6 +150,32 @@ E0000000 80008000</pre></td>
 </table>
 
 <table>
+<caption>Press D-pad up to have 0 lives</caption>
+<tr>
+<th>PAL</th>
+<th>US NTSC</th>
+<th>JAP NTSC</th>
+<th>Shindou</th>
+<th>VC</th>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre>D0339c30 0008
+8033B21D 0000</pre>
+</td>
+<td>
+<pre>D0339C30 0008
+80339EAD 0000</pre>
+</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+
+<p>Note: Using “D-pad down to die” and “D-pad up to have 0 lives” together allows you to do a “soft reset” (return to main menu) by forcing a game over. This can be useful as you can't otherwise easily reset the N64 when the GameShark is in use.</p>
+
+<table>
 <caption>Skip death animation</caption>
 <tr>
 <th>PAL</th>
@@ -196,4 +222,25 @@ E0000000 80008000</pre></td>
 <td></td>
 </tr>
 </table>
+
+<table>
+<caption>Intro skip</caption>
+<tr>
+<th>PAL</th>
+<th>US NTSC</th>
+<th>JAP NTSC</th>
+<th>Shindou</th>
+<th>VC</th>
+</tr>
+<tr>
+<td></td>
+<td><pre>8124bbd4 2400</pre></td>
+<td><pre>8124ba34 2400</pre></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+
+<p>Note: Use “Intro skip” together with “D-pad down to die” and “D-pad up to have 0 lives” (and possibly “Skip death animation”) to practice Lakitu skip. Just be careful not to get 0 health/lives after Lakitu has started talking to you, since you will not be able to progress.</p>
+
 {% endblock %}
